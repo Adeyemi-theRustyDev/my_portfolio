@@ -1,20 +1,31 @@
+import { useState } from "react";
+
 const Header = () => {
+    const menuOpenedStyles = "flex-col md:flex-row md:flex gap-8";
+    const menuClosedStyles = `hidden ${menuOpenedStyles}`;
+
+    const hamburgerMenuIcon = "/assets/hamburger-menu.svg";
+    const menuCloseIcon = "/assets/close.svg"
+    
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
-        <header className="w-screen bg-gray-900">
-            <nav className="flex justify-between px-4 py-8">
+        <header className="bg-gray-900">
+            <nav className="flex flex-col md:flex-row justify-between px-4 py-8">
 
                 <div className="flex container justify-between cursor-pointer md:w-auto">
                     <h1>Abiade Abdulazeez</h1>
-                    <div className="toggler md:hidden w-8 h-8 z-50">
-                        <img className="container" src="/assets/hamburger-menu.svg" alt="Menu" />
+                    <div 
+                    className="toggler md:hidden w-8 h-8 z-50"
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                        <img className="container" src={isMenuOpen ? menuCloseIcon : hamburgerMenuIcon} alt="Menu" />
                     </div>
                 </div>
                 
 
-                <ul className="hidden flex-col md:flex-row md:flex gap-8">
+                <ul className={isMenuOpen ? menuOpenedStyles : menuClosedStyles}>
 
-                    <li><a href="#">About me</a></li>
-                    <li><a href="#">Projects</a></li>
+                    <li><a href="#" className="hover:text-sky-300">About me</a></li>
+                    <li><a href="#" className="hover:text-sky-300">Projects</a></li>
                 </ul>
             </nav>
         </header>
