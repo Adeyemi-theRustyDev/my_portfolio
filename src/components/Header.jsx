@@ -5,7 +5,7 @@ const Header = () => {
     const menuClosedStyles = `hidden ${menuOpenedStyles}`;
 
     const hamburgerMenuIcon = "/assets/hamburger-menu.svg";
-    const menuCloseIcon = "/assets/close.svg"
+    const menuCloseIcon = "/assets/close.svg";
     
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
@@ -24,8 +24,8 @@ const Header = () => {
 
                 <ul className={isMenuOpen ? menuOpenedStyles : menuClosedStyles}>
 
-                    <li><a href="#" className="hover:text-sky-300">About me</a></li>
-                    <li><a href="#" className="hover:text-sky-300">Projects</a></li>
+                    <li><a href="#" className="text-gray-200 hover:text-slate-600">About me</a></li>
+                    <li><a href="#" className="text-gray-200 hover:text-slate-600">Projects</a></li>
                 </ul>
             </nav>
         </header>
