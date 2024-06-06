@@ -29,7 +29,7 @@ const Home = () => {
                     or on any of the social-media listed below
                 <div className="social-icons">
 
-                    <a href="https://github.com/Adeyemi-theRustyDev" target="_blank"><FaGithub /></a>
+                    <a href="https://github.com/Cmdliner" target="_blank"><FaGithub /></a>
                     <a href="https://twitter.com/yemiTheDev" target="_blank"> <FaXTwitter /> </a>
                     <a href="https://instagram.com/half_submerged_titan" target="_blank"><FaInstagram /></a>
                     <a href="https://linkedin.com/in/Commandliner" target="_blank"><FaLinkedin /></a>
